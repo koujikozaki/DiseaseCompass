@@ -1,3 +1,9 @@
+■疾患コンパス
+C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DiseaseChainViewer\js\addons\statetree.js
+→以下の2つのツールのアドレス
+
+
+■汎用連鎖
 relation.htmlの設定　→js/relation_main.js
 
 ■異常状態ツリー
