@@ -7,7 +7,8 @@ var sparql;
 $(window).load(function() {
 	sparql = new Sparql();
 	sparql.server = "http://lod.hozo.jp";
-	sparql.endpoint = {"endpoint": "http://133.1.32.98:8890/sparql"};
+	sparql.endpoint = {"endpoint": "http://lod.hozo.jp/endpoint/disease_multi"};
+//	sparql.endpoint = {"endpoint": "http://133.1.32.98:8890/sparql"};
 
 	sparql.result_func = finder_result;
 /*

@@ -6,7 +6,8 @@ var dcviewer_url = 'http://lod.hozo.jp/DiseaseChainViewer/';
 var endpoint = 'http://lod.hozo.jp/endpoint/disease_multi';
 //var endpoint = 'http://localhost:8890/sparql';
 // 異常状態ツリーURL
-var tree_url = 'http://www.ei.sanken.osaka-u.ac.jp/med-ontology/abn_onto/';
+var tree_url = 'http://diseasecompass.hozo.jp/abn_onto/';
+//var tree_url = 'http://www.ei.sanken.osaka-u.ac.jp/med-ontology/abn_onto/';
 // 異常状態－疾患データリンクエンドポイント
 var link_endpoint = 'http://lod.hozo.jp/endpoint/disease_multi';
 

@@ -1,0 +1,4 @@
+relation.htmlの設定　→js/relation_main.js
+
+■異常状態ツリー
+・異常状態オントロジーのEndpoint　→　main.js　
