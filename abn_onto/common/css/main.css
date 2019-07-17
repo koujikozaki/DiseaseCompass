@@ -1,0 +1,110 @@
+
+body {
+	text-align:center;
+
+}
+
+#container {
+	width:96%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+}
+
+#left_panel { float : left ; width : 300px ; }
+#right_panel {margin-left: 300px;}
+
+
+#tree {
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	border: 1px solid black;
+	height: 400px;
+	background-color: #FFFFFF;
+}
+
+#tree_panel {
+	background-color: #77DDFF;
+}
+
+#find_word_panel {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid black;
+	width: 270px;
+	background-color: #5599FF;
+
+}
+
+#find_result {
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size:smaller;
+	margin: 5px;
+	border: 1px solid black;
+	width: 280px;
+	height: 200px;
+}
+
+#find_result ul{
+	margin:0;
+	padding:3px;
+	list-style-type:none;
+	cursor: pointer;
+}
+
+#find_result ul .selected {
+	background-color: yellow;
+}
+
+
+#find_type_panel {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid black;
+	width: 270px;
+}
+
+#desc_list table {
+	border-collapse: separate;
+	border-spacing: 2px;
+	width:100%;
+}
+
+#desc_list td {
+  background: #F2F5FF;
+}
+
+#desc_list td.head {
+	font-weight:bold;
+	background: #CBD5FF;
+}
+
+#bgwindow {
+	position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:black;
+    opacity: 0.30;
+    filter:alpha(opacity=30);
+
+}
+
+#progress_div {
+text-align: center;
+	margin: 0 auto;
+	position:absolute;
+  top:50%;
+  left:50%;
+  padding:10px;
+  background-color:rgba(255,255,255,1);
+  border: medium solid #000000;
+}
+
+#progress {
+    height:20px;
+    width:250px;
+}

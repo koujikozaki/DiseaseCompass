@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Abnormal Ontology is-a tree</title>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1");</script>
+<script type="text/javascript">google.load("jqueryui", "1");</script>
+<script type="text/javascript" src="./js/main.js" charset="UTF-8"></script>
+<script src="js/sparql.js"></script>
+<script src="js/treeData.js"></script>
+<script src="js/treeLib.js"></script>
+<script src="js/simpletreemenu.js"></script>
+<script src="http://lod.hozo.jp/SparqlFinder/js/sparql.js"></script>
+<script src="js/finder.js"></script>
+<script>
+var lang = 'en';
+</script>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/simpletree.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://lod.hozo.jp/SparqlFinder/css/table.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://lod.hozo.jp/SparqlFinder/css/popup.css" />
+<link rel="stylesheet" type="text/css" href="css/finder.css" />
+
+</head>
+<body>
+ <div id="container">
+  <!-- 左ペインとなる検索画面  -->
+  <div id="left_panel">
+   <div id="find_word_panel">
+Search <b>Abnormality</b> which includes<br>
+<input type="text" id="find_word"><br>
+in <select id="find_type">
+<option value="label">Abnormal state</option>
+<option value="olabel">Target Object(O)</option>
+<option value="alabel">Attribute(A)</option>
+<option value="vlabel">Value of Attribute(V)</option>
+</select><br>
+<input type="button" value="Search" id="find_do"><!-- <input type="button" value="Clear" id="find_clear"> -->
+   </div>
+   <div id="find_type_panel">
+<b>Abnormal States Filter</b><br>
+    <div id="find_states"></div>
+
+   </div>
+   <div id="find_result">
+<ul id="find_result_list"></ul>
+   </div>
+  </div>
+  <div id="right_panel">
+   <div id="tree_panel">
+<b>Abnormality Ontology is-a tree</b>
+    <div id="tree"></div>
+   </div>
+   <div id="description_panel">
+
+   </div>
+  </div>
+  <div id="bgwindow"></div>
+  <div id="progress_div">Now Loading...<br><br><progress id="progress" value="0" max="100"></progress></div>
+ </div>
+</body>
+
+</html>

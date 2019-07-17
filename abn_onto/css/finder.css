@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+#disease_derived ,
+#disease_core {
+	margin:0;
+	padding:3px;
+	list-style-type:none;
+	cursor: pointer;
+}
