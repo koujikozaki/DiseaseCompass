@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>疾患オントロジーLinked Data（RDF）版のSPARQLエンドポイント</title>
+</head>
+
+<body lang=JA link=blue vlink=purple>
+<h1>疾患オントロジーLinked Data（RDF）版のSPARQLエンドポイント</h1>
+<!--<span lang=EN-US><a href="index.html">[English]</a></span>-->
+<hr>
+<p>
+本ページでは「医療情報システムのための医療知識基盤データベース研究開発事業」
+で開発された，<a href="http://onto.bmi.m.u-tokyo.ac.jp/">臨床医学オントロジー CONAND(Clinical Ontology in Anatomaical Structure and Disease)</a>
+の<strong>疾患オントロジーのLinked Data（RDF）</strong>の情報を公開しています．
+</p>
+
+
+<H2>疾患オントロジーのLinked Data（RDFデータ）へのアクセス方法</H2>
+<p>臨床医学オントロジー CONANDの疾患オントロジーのLinked Data（RDFデータ）は，以下のSPARQLエンドポイントから取得できます．</p>
+<h3>SPARQLエンドポイント</h3>
+<a href="http://lod.hozo.jp/endpoint/disease_multi" target="_blank">http://lod.hozo.jp/endpoint/disease_multi</a><br>
+
+<h3>データモデル</h3>
+「疾患オントロジー」から「異常状態の因果連鎖」に関する情報のみを抽出してRDF化しています．<br>
+本来は，オントロジーですので「クラス（概念）レベル」の情報を表していますが，LODとして利用する際の利便性を考え，全てインスタンス（RDFリソース）の形に変換してあります．
+データモデルの概要は，以下の通りです．<br>
+<UL>
+<LI>各疾患はDisease typeのインスタンス，異常状態はAbnormal_State typeのインスタンスとして表現されます．
+<LI>各疾患の因果連鎖を構成する異常状態は，
+<LI>- hasCoreState：疾患定義となる因果連鎖に含まれる異常状態
+<LI>- hasDerivedState：疾患定義には含まれないが，その疾患に罹患した患者に典型的に見られる異常状態
+という2種類のプロパティで表されています．
+</LI>
+<LI>異常状態間の因果関係は，hasCauseおよびhasResultプロパティで表現されています．
+<LI>疾患のis-a関係はsubDiseaseOfプロパティで表されます．（rdfs:subClassOfを用いていない理由は，各疾患や異常状態をインスタンスとすることで，
+因果関係の検索・探索を簡単に行えるようにするためです．
+オントロジー版ではクラスレベルでのより厳密な定義を提供します）
+</UL>
+<h3>疾患連鎖の記述例</h3>
+<img  style="width:500px;" src="img/model.png"><br>
+<br>
+
+上記の例では，「疾患」Aとその下位疾患である「疾患B」に含まれる因果連鎖を示しています．<br>
+「疾患B」の因果連鎖を取得する場合には，上位疾患である「疾患A」に含まれる因果連鎖を合わせて取得する必要があります．<br>
+よって，「疾患B」の因果連鎖を<a href="index.html">「疾患オントロジーナビゲータ :Disease Compass」</a>の形式で可視化すると下記のようになります．<br>
+<br>
+<img  style="width:500px;" src="img/chain.png"><br>
+<br>
+
+<p>本データセットの詳細や，SPARQLでの検索例などについては，
+<a href="https://doi.org/10.1527/tjsai.29.396" target="_blank">こちらの文献</a>をご覧ください．
+</p>
+
+
+</body>
+
+<hr>
+<a href="http://onto.bmi.m.u-tokyo.ac.jp/">臨床医学オントロジー CONANDのページに戻る</a><br>
+[更新日：2019/07/17]	
+</html>
